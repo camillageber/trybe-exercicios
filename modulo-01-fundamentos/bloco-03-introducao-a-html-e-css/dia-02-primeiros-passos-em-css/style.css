@@ -1,0 +1,83 @@
+h1{
+    font-size: 2em;
+}
+div{
+    background-color: rgb(0, 0, 0);
+}
+body {
+    font-size: 20px;
+    font-family: monospace;
+
+    
+}
+
+p {
+    font-size: 20px;
+    color: rgb(214, 61, 207);
+    line-height: 40px;
+    text-align: left;
+    text-decoration: wavy;
+    margin-left: 40px;
+    margin-top: -20px;
+}
+ul{
+   color: rgb(214, 61, 207); 
+   margin-left: 40px;
+   font-size: 20px;
+   font-weight: bold;
+
+}
+
+.color-titles{
+    color: royalblue;
+    margin-left: 40px;
+    font-family: "Sofia";
+    font-size: 30px;
+}
+.series-names{
+    color: royalblue;
+}
+
+#line-one{
+    margin-top: -1px;
+    
+}
+#color-title{
+    color: rgb(214, 61, 207);
+    font-weight: 600;
+    letter-spacing: -1px;
+    font-size: 45px;
+    margin-left: 40px;
+
+}
+#sources{
+    color: royalblue;
+    margin-left: 40px;
+    font-weight: bold;
+    font-style: italic;
+}
+#button-p{
+    font-family: "Sofia";
+    font-size: 30px;
+}
+.picture{
+    border-radius: 20%;
+    margin-left: 100px;
+    padding: 10px;
+    width: 800px;
+    height: 800px;
+}
+.button{
+    color: rgb(255, 119, 221);
+    background-color: rgb(29, 33, 255);
+    padding: 5px;
+    border-radius: 2px;
+    font-size: 30px;
+    border-width: 10px;
+    font-weight: bolder;
+    font-style: normal;
+    opacity: 0.6;
+    border-style: groove;
+
+  
+}
