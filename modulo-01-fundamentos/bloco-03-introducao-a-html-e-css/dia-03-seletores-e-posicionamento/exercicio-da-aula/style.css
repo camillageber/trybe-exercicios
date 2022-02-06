@@ -1,0 +1,122 @@
+h1 {
+    font-size: 2em;
+}
+
+body {
+    font-size: 20px;
+    font-family: monospace;
+    background-color: black;
+
+}
+
+p {
+    font-size: 20px;
+    color: rgb(214, 61, 207);
+    line-height: 40px;
+    text-align: left;
+    text-decoration: wavy;
+    margin-left: 40px;
+    margin-top: -20px;
+}
+
+ul {
+    color: rgb(214, 61, 207);
+    margin-left: 40px;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.color-titles {
+    color: royalblue;
+    margin-left: 40px;
+    font-family: "Sofia";
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#subsub {
+    text-align: center;
+}
+
+.series-names {
+    color: royalblue;
+}
+
+.line-one {
+
+    text-align: center;
+    margin-bottom: 300px;
+}
+
+.line-two {
+    text-align: center;
+    color: royalblue;
+    margin-left: 40px;
+    font-family: "Sofia";
+    font-size: 30px;
+    margin-top: 100px;
+}
+
+#color-title {
+    color: rgb(214, 61, 207);
+    font-weight: 600;
+    letter-spacing: -1px;
+    font-size: 45px;
+    margin-left: 40px;
+
+}
+
+#sources {
+    color: royalblue;
+    margin-left: 40px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#button-p {
+    font-family: "Sofia";
+    font-size: 30px;
+}
+
+.picture {
+    height: 600px;
+    float: left;
+    padding: 10px;
+    background-color: blue;
+    top: -20px;
+    left: 10px;
+    position: relative;
+    border-radius: 700px;
+    margin-left: 50px;
+    width: 500px;
+
+}
+
+.button {
+    color: rgb(255, 119, 221);
+    background-color: rgb(29, 33, 255);
+    padding: 5px;
+    border-radius: 2px;
+    font-size: 30px;
+    border-width: 10px;
+    font-weight: bolder;
+    font-style: normal;
+    opacity: 0.6;
+    border-style: groove;
+
+}
+
+div {
+    border: 2px solid;
+}
+
+.image-container {
+    height: 700px;
+    position: relative;
+}
+
+ul.customizacao li:nth-child(odd) {
+    background-color: royalblue;
+}
