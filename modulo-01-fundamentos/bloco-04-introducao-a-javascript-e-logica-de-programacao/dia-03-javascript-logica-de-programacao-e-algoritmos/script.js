@@ -272,3 +272,5 @@
 
 // if (divisors === 2) console.log(numberToCheck + ' é primo');
 // else console.log(numberToCheck + ' não é primo');
+
+
