@@ -37,7 +37,13 @@ mudaCor2();
 
 //  4- Crie uma função que corrija o texto da tag <h1>.
 
+function title(){
+    let textoCorrigido = document.getElementsByTagName("h1")[0];
+    textoCorrigido.innerText = "Exercício 5.1 - Javascript";
 
+    return textoCorrigido;
+};
+title();
 //  5- Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
 
 
