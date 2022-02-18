@@ -46,5 +46,12 @@ function title(){
 title();
 //  5- Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
 
+function textoMaiusculo(){
+    let mudaTexto = document.getElementsByTagName("p")[0];
+    mudaTexto.innerHTML =  mudaTexto.innerHTML.toUpperCase();
+
+    return mudaTexto;
+};
+textoMaiusculo();
 
 //  6- Crie uma função que exiba o conteúdo de todas as tags <p> no console.
