@@ -27,6 +27,13 @@ mudaCor();
 
 //  3- Crie uma função que mude a cor do quadrado vermelho para branco.
 
+function mudaCor2(){
+    let corBranca = document.getElementsByClassName("center-content")[0];
+    corBranca.style.backgroundColor = "white";
+
+    return corBranca;
+};
+mudaCor2();
 
 //  4- Crie uma função que corrija o texto da tag <h1>.
 
