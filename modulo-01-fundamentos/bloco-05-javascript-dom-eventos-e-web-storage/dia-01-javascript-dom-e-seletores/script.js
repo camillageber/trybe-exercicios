@@ -11,12 +11,19 @@ function descricao(){
      let paragrafoDescricao = document.getElementsByTagName("p")[1];
      paragrafoDescricao.innerText = "Eu espero que daqui há 2 anos eu esteja mais sábia, mais calma, mais feliz.";
 
-     return descricao();
+     return paragrafoDescricao;
  };
  descricao();
 
 //  2- Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).
 
+function mudaCor(){
+    let corVerde = document.getElementsByTagName("main")[0];
+    corVerde.style.backgroundColor = "rgb(76,164,109)";
+
+    return corVerde;
+};
+mudaCor();
 
 //  3- Crie uma função que mude a cor do quadrado vermelho para branco.
 
