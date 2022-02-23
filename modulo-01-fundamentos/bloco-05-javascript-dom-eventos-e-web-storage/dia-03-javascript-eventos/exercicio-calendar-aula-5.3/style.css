@@ -119,7 +119,7 @@
   }
   
   .task-list {
-    margin-top: 20px;
+    margin-top: 30px;
   }
   
   .task-list-container {
@@ -129,7 +129,7 @@
   .task-list-container ul {
     list-style-type: none;
     padding: 0;
-    color: #666;
+    color: rgb(209, 180, 14);
     font-size: 18px;
     font-weight: 500;
     letter-spacing: 2px;
