@@ -24,12 +24,23 @@
 // Utilize o throw new Error e o bloco try/catch .
 // Imprima o erro no parágrafo com id result , para que a pessoa usuária saiba o que aconteceu. Lembre-se de usar erros descritivos!
 // Evite funções que tenham muitas responsabilidades distintas.
+  
+    // EXERCÍCIO 2:
+// Agora adicione uma outra exceção, caso a pessoa usuária digite um valor que não seja numérico.
+// Você pode fazer essa verificação utilizando a função isNan() .
 
-    // OBS: é necessário primeiramente criar uma função com parâmetros e colocar em um if 
+    // EXERCÍCIO 3:
+// Você se lembrou de limpar os inputs após o clique do botão? Teve que repetir código para isso? Que tal refatorar sua função utilizando o finally ?
+    
+// OBS: é necessário primeiramente criar uma função com parâmetros e colocar em um if 
     // aquilo que você quer definit como um erro. Após isso, especifique a msg no seu 'throw new Error'
     // o ponto de exclamação na frente do parâmetro define que não há um valor (value1 ou value2)
 
     const verifySpaces = (value1, value2) => {
+      if (isNaN(value1) || isNaN(value2)) {
+        throw new Error('Informe apenas números para realizar a soma');
+      }
+
       if (!value1 || !value2) {
         throw new Error('Os dois campos devem ser preenchidos');
       }
@@ -43,7 +54,7 @@
     // Limpe o input após isso.
     // Após definir o try, crie seu catch, incluindo onde irá aparecer a msg se houver erro  (no caso,
     // também será no id result).
-    // Limpe o input depois. 
+    // Limpe o input depois (inclui esse dado no finally). 
 
     function sum() {
       try {
@@ -52,17 +63,16 @@
         verifySpaces(value1, value2);
         const result = parseInt(value1) + parseInt(value2);
         document.getElementById('result').innerHTML = `Resultado: ${result}`;
-        document.getElementById('value1').value = '';
-        document.getElementById('value2').value = '';
       } catch (error) {
         document.getElementById('result').innerHTML = `Um erro ocorreu: ${error.message}`;
+      } finally {
         document.getElementById('value1').value = '';
         document.getElementById('value2').value = '';
       }
     };
     
     // Crie uma função window.onload para definir o que acontecerá quando o usuário clicar no botão.
-    // Crie uma variável que defina ussi com um addEventListener.
+    // Crie uma variável que defina isso com um addEventListener.
     window.onload = () => {
       const button = document.getElementById('button');
       button.addEventListener('click', sum);
