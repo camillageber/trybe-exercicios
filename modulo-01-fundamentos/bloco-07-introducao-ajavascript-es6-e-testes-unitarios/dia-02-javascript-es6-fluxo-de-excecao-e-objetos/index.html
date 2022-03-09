@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Calculadora</title>
+</head>
+
+<body>
+  <p>Informe dois números para realizar a soma:</p>
+  <label for='value1'>Valor 1:</label>
+  <input type='text' id='value1'>
+  <label for='value2'>Valor 2:</label>
+  <input type='text' id='value2'>
+  <button id='button'>Somar</button>
+  <p id='result'></p>
+  <script>
+
+    // EXERCÍCIO 1:
+// Crie um erro personalizado que será chamado se a pessoa usuária digitar apenas um número.
+// Tente executar a aplicação com um dos valores em branco. Notou que o retorno não é muito descritivo?
+// Utilize o throw new Error e o bloco try/catch .
+// Imprima o erro no parágrafo com id result , para que a pessoa usuária saiba o que aconteceu. Lembre-se de usar erros descritivos!
+// Evite funções que tenham muitas responsabilidades distintas.
+
+    // OBS: é necessário primeiramente criar uma função com parâmetros e colocar em um if 
+    // aquilo que você quer definit como um erro. Após isso, especifique a msg no seu 'throw new Error'
+    // o ponto de exclamação na frente do parâmetro define que não há um valor (value1 ou value2)
+
+    const verifySpaces = (value1, value2) => {
+      if (!value1 || !value2) {
+        throw new Error('Os dois campos devem ser preenchidos');
+      }
+    };
+
+    // Após isso, crie uma função para incluir seu try, que será o que você quer que ocorra de forma correta
+    // e o seu catch para os eventuais erros. 
+    // Nesse caso, crie variáveis para armazenar o valor 1 e 2 e chame a função incial que define o erro. 
+    // Crie uma variável para definir a operação esperada. 
+    // Depois diga onde irá aparecer o resultado (nesse caso é o id result)
+    // Limpe o input após isso.
+    // Após definir o try, crie seu catch, incluindo onde irá aparecer a msg se houver erro  (no caso,
+    // também será no id result).
+    // Limpe o input depois. 
+
+    function sum() {
+      try {
+        const value1 = document.getElementById('value1').value;
+        const value2 = document.getElementById('value2').value;
+        verifySpaces(value1, value2);
+        const result = parseInt(value1) + parseInt(value2);
+        document.getElementById('result').innerHTML = `Resultado: ${result}`;
+        document.getElementById('value1').value = '';
+        document.getElementById('value2').value = '';
+      } catch (error) {
+        document.getElementById('result').innerHTML = `Um erro ocorreu: ${error.message}`;
+        document.getElementById('value1').value = '';
+        document.getElementById('value2').value = '';
+      }
+    };
+    
+    // Crie uma função window.onload para definir o que acontecerá quando o usuário clicar no botão.
+    // Crie uma variável que defina ussi com um addEventListener.
+    window.onload = () => {
+      const button = document.getElementById('button');
+      button.addEventListener('click', sum);
+    }
+  </script>
+</body>
+
+</html>
