@@ -16,11 +16,12 @@ const setCoins = async () => {
 
   const cryptoList = document.getElementById('cryptoList');
 
-  coins.forEach((coin) => {
+  coins
+  .filter((coin) => Number(coin.rank) <= 10)
+  .forEach((coin) => {
     const newLi = document.createElement('li');
-    const usdPrice = Number(coin.priceUsd);
 
-    newLi.innerText = `${coin.name} (${coin.symbol}): ${usdPrice.toFixed(2)}`;
+    newLi.innerText = `${coin.name} (${coin.symbol}): ${coin.priceUsd}`;
 
     cryptoList.appendChild(newLi);
   });
